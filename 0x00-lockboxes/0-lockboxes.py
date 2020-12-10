@@ -4,7 +4,8 @@
 
 def canUnlockAll(boxes):
     """ function to check if box can be unlocked"""
-    new = [False for x in range(len(boxes))]
+    if boxes is None or len(boxes) <= 1:
+        return True
     idx = []
     nunl = []
     for x in range(len(boxes)):
