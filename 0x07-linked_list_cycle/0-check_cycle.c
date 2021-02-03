@@ -9,20 +9,20 @@
  */
 int check_cycle(listint_t *list)
 {
-    const listint_t *temp;
-    int x;
+	const listint_t *temp;
+	int x;
 
-    temp = list;
-    x = 0;
-    while (temp != NULL)
-    {
-        if (x == 10)
-        {
-            return (1);
-        }
-        temp = temp->next;
-        x++;
-    }
+	temp = list;
+	x = 0;
+	while (temp != NULL)
+	{
+		if (x == 10)
+		{
+			return (1);
+		}
+		temp = temp->next;
+		x++;
+	}
 
-    return (0);
+	return (0);
 }
