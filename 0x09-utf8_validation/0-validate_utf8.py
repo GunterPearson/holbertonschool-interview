@@ -5,6 +5,6 @@
 def validUTF8(data):
     """ return based on valid"""
     for x in data:
-        if x > 127:
+        if x >= 127:
             return False
     return True
