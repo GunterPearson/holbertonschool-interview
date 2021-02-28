@@ -23,7 +23,9 @@ void menger(int level)
 			while (x > 0)
 			{
 				if (x % 3 == 1 && y % 3 == 1)
+				{
 					hash = ' ';
+				}
 				x = x / 3;
 				y = y / 3;
 			}
