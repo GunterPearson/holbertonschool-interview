@@ -7,6 +7,8 @@ from operator import mul
 
 def rain(walls):
     """Return: Integer indicating total amount of rainwater"""
+    if walls == []:
+        return 0
     len_x = walls[0]
     multiply = 0
     total = 0
