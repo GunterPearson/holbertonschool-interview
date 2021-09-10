@@ -1,34 +1,48 @@
 #!/usr/bin/python3
 """Count it module"""
 import requests
+import sys
 
 
-def count_words(subreddit, word_list, after='', counter=None):
+def count_words(subreddit, word_list, cont={}, next=None, rea={}):
     """count words"""
-    if counter is None:
-        counter = {item: 0 for item in word_list}
-
-    if after is None:
-        items = counter.items()
-        sorted_items = sorted(items, key=lambda x: x[1])[::-1]
-        for (key, value) in sorted_items:
-            if value != 0:
-                print("{}: {}".format(key, value))
-        return None
-    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    params = {'after': after, 'limit': 100}
-    done = requests.get(url, params=params, allow_redirects=False)
-
-    if done.status_code == 200:
-        done = done.json()
-        after = done["data"]["after"]
-        children = [child for child in done["data"]["children"]]
-        for child in children:
-            title = child["data"]["title"]
-            tokens = [token.lower() for token in title.split()]
-            for word in word_list:
-                counter[word] += tokens.count(word)
-
-        count_words(subreddit, word_list, after, counter)
+    headers = {"User-Agent": "nildiert"}
+    if next:
+        subr = requests.get('https://reddit.com/r/' + subreddit +
+                            '/hot.json?after=' + next, headers=headers)
     else:
-        return None
+        subr = requests.get('https://reddit.com/r/' + subreddit +
+                            '/hot.json', headers=headers)
+
+    if subr.status_code == 404:
+        return
+
+    if cont == {}:
+        for word in word_list:
+            cont[word] = 0
+            rea[word] = word_list.count(word)
+
+    subr_dict = subr.json()
+    data = subr_dict['data']
+    next = data['after']
+    subr_posts = data['children']
+
+    for post in subr_posts:
+        post_data = post['data']
+        post_title = post_data['title']
+        title_words = post_title.split()
+        for w in title_words:
+            for key in cont:
+                if w.lower() == key.lower():
+                    cont[key] += 1
+    if next:
+        count_words(subreddit, word_list, cont, next, rea)
+    else:
+        for key, val in rea.items():
+            if val > 1:
+                cont[key] *= val
+        sorted_abc = sorted(cont.items(), key=lambda x: x[0])
+        sorted_res = sorted(sorted_abc, key=lambda x: (-x[1], x[0]))
+        for res in sorted_res:
+            if res[1] > 0:
+                print('{}: {}'.format(res[0], res[1]))
