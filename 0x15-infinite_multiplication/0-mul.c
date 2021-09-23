@@ -46,8 +46,8 @@ char *_callocX(unsigned int nmemb)
 
 /**
  * main - multiplies inf numbers
- * @argc: # of cmd line args
- * @argv: cmd line args
+ * @argc: len of args
+ * @argv: args
  *
  * Return: No return
  */
