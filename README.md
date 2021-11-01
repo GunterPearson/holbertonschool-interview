@@ -5,7 +5,8 @@ This repository contains projects that help build self confidence in interview s
 
 ## Programming Languages
 - Python
-![Rotate_2D_matrix image](https://github.com/GunterPearson/holbertonschool-interview/blob/main/images/rotate_2d_matrix.png?raw=true)
+
+![Rotate_2D_matrix image](https://github.com/GunterPearson/Images/blob/main/interview_prep/rotate_2d_matrix.png?raw=true)
 
 ```
 gunter@ubuntu:~/0x16$$ ./0-main.py
@@ -21,7 +22,8 @@ ROTATED:
 
 
 - C
-![Linked_list_cycle image](https://github.com/GunterPearson/holbertonschool-interview/blob/main/images/linked_list_cycle.png?raw=true)
+
+![Linked_list_cycle image](https://github.com/GunterPearson/Images/blob/main/interview_prep/linked_list_cycle.png?raw=true)
 
 ```
 gunter@ubuntu:~/0x07$$ ./cycle 
