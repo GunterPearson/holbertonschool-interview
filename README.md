@@ -5,3 +5,5 @@ This repository contains projects that help build self confidence in interview s
 
 ## Programming Languages
 [![Gunters's GitHub stats](https://github-readme-stats.vercel.app/top-langs/api?username=GunterPearson)](https://github.com/GunterPearson/github-readme-stats)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GunterPearson)
