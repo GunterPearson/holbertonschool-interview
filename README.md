@@ -27,14 +27,10 @@ ROTATED:
 
 ```
 gunter@ubuntu:~/0x07$$ ./cycle 
-1024
-402
-98
-4
-3
-2
-1
-0
+List:
+1024, 402, 98, 4, 3, 2, 1, 0
 Linked list has no cycle
+List:
+1024, 402, 98, 4, 3, 2, 1, 0, 1024, 402, 98, 4, 3, 2, 1, 0 ....
 Linked list has a cycle
 ```
