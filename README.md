@@ -5,5 +5,18 @@ This repository contains projects that help build self confidence in interview s
 
 ## Programming Languages
  - C
- ![This is an image](https://github.com/GunterPearson/holbertonschool-interview/blob/main/images/linked_list_cycle.png?raw=true)
+![This is an image](https://github.com/GunterPearson/holbertonschool-interview/blob/main/images/linked_list_cycle.png?raw=true)
 
+```
+gunter@ubuntu:~/0x07$$ ./cycle 
+1024
+402
+98
+4
+3
+2
+1
+0
+Linked list has no cycle
+Linked list has a cycle
+```
