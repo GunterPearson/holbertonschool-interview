@@ -37,7 +37,7 @@ Linked list has a cycle
 
 ## Authors
 
-**Gunter Pearson:**
+#### Gunter Pearson:
 I am currently studying Machine Learning at Holberton School in Tulsa, Oklahoma and will graduate in January 2022. While working through these projects I have found a passion in problem solving and a need for finding more and more efficient algorithms as I practice and prepare my skills for technical interviews. You can keep up with my progress and find out more about me by clicking on the following links:
 - [LinkedIn](www.linkedin.com/in/gunter-pearson-0611b81a1)
 - [Git Hub](https://github.com/GunterPearson)
