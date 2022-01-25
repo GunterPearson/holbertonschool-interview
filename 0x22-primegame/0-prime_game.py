@@ -11,7 +11,6 @@ def isWinner(x, nums):
             return "Ben"
         nums.remove(min(nums))
         if len(nums) == 1:
-            print(nums[0])
             if nums[0] == 5 and x == 5:
                 return "Ben"
             if nums[0] % 2 == 0:
