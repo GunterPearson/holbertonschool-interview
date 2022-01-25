@@ -8,7 +8,7 @@ def isWinner(x, nums):
         nums.remove(min(nums))
         if len(nums) == 1:
             if nums[0] % 2 == 0:
-                return "Maria"
+                return "Ben"
             if nums[0] == 2 or nums[0] == 8:
                 return "Maria"
             else:
